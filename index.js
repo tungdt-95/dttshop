@@ -1,8 +1,12 @@
-$(document).ready(function(){
-    $('.menu-mb').click(function(){
-        $('ul').toggleClass('show')
-    });
-  });
+document.addEventListener("DOMContentLoaded", function(){
+    var menu = document.querySelector(".menu-mb");
+    var menuleft = document.querySelector(".main-menu");
+    // console.log(menuleft);
+    menu.onclick = function(){
+        menuleft.classList.toggle("show");
+    }
+
+},false)
 
 
   //   SLIDE 
