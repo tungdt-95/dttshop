@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--main-bg-color);
 }
 
@@ -47,6 +47,93 @@ img {
 .bg-main {
     background-color: var(--main-bg-color);
 }
+/* SLIDE  */
+.next-page{
+    text-align: center;
+    margin-top: -78px;
+}
+.next-page ul
+{
+    display: inline;
+}
+.next-page ul li
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(201, 194, 194);
+    text-indent: -9999px;
+    margin-right: 10px;
+}
+.next-page ul li:hover,
+.next-page ul li.active
+{
+    background-color: rgb(238, 29, 29);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.slide ul li
+{
+    display: none;
+}
+.slide ul li.active
+{
+   display: block;
+   transition: 0.3s ease-in-out;
+}
+/* ANIMATION SLIDE  */
+.slide ul li.active .info-content h3,
+.slide ul li.active .info-content h2,
+.slide ul li.active .info-content p,
+.slide ul li.active .info-content button
+{
+    opacity: 0;
+   
+}
+.slide ul li.active .info-content h3,
+.slide ul li.active .info-content h2,
+.slide ul li.active .info-content p,
+.slide ul li.active .info-content button
+{
+    animation: chudivao 1s forwards;
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes chudivao {
+    from
+    {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slide ul li.active .info-content h3
+{
+    animation-delay: 0.2s;
+}
+.slide ul li.active .info-content h2
+{
+    animation-delay: 0.3s;
+}
+.slide ul li.active .info-content p
+{
+    animation-delay: 0.8s;
+}
+.slide ul li.active .info-content button
+{
+    animation-delay: 1s;
+}
+.slide ul li.active img
+{
+    animation-delay: 1s;
+}
+
+
 /* TOP HEADER  */
 .top-header
 {
@@ -82,6 +169,7 @@ img {
 .dropdown
 {
     position: relative;
+    
 }
 
 .dropdown:hover .dropdown-content
@@ -145,17 +233,7 @@ ul.top-header-flex > li
     margin-bottom: 10px;
 }
 
-.trans-delay-0-4 {
-    transition-delay: 0.4s;
-}
 
-.trans-delay-0-6 {
-    transition-delay: 0.6s;
-}
-
-.trans-delay-0-8 {
-    transition-delay: 0.8s;
-}
 /* BOTTOM HEADER  */
 .main-menu
 {
@@ -172,13 +250,6 @@ ul.top-header-flex > li
     text-transform: uppercase;
     font-weight: 500;
     padding: 10px 0;
-}
-.main-menu li a:hover
-{
-    background-color: var(--red);
-    border-radius: 10px;
-    padding: 5px 10px;
-    
 }
 h2{
     font-size: 60px;
