@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
     var menu = document.querySelector(".menu-mb");
     var menuleft = document.querySelector(".main-menu");
@@ -7,11 +10,36 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 },false)
+//cart
+document.addEventListener("DOMContentLoaded", function(){
+    var showcart = document.querySelector(".click-cart");
+    var cart = document.querySelector(".cart");
+    // console.log(menuleft);
+    showcart.onclick = function(){
+        cart.classList.toggle("show-cart");
+    }
 
+},false)
+//
+document.addEventListener("DOMContentLoaded", function(){
+    const cartbtn = document.querySelectorAll(".product-card");
+    cartbtn.forEach(function(btn){
+        btn.addEventListener("click",function(event){
+            // console.log(event.target);
+           if (event.target.parentElement.classList.contains("product-card"))
+           {
+                let fullpage = event.target.parentElement.previousElementSibling.src;
+           }
+
+
+        })
+    })
+
+},false)
 
   //   SLIDE 
 
-document.addEventListener("DOMContentLoaded", function(){
+    document.addEventListener("DOMContentLoaded", function(){
     // khai bao doi tuong can su dung
     var btn = document.querySelectorAll(".next-page ul li");
     var slides = document.querySelectorAll(".slide ul li");
